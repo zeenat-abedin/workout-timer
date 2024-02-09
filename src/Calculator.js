@@ -21,6 +21,10 @@ function Calculator({ workouts, allowSound }) {
     setDurationBreak((number * sets * speed) / 60 + (sets - 1) * durationBreak);
   }, [number, sets, speed, durationBreak]);
 
+  function handleInc() {
+    setDuration((duration) => duration + 1);
+  }
+
   return (
     <>
       <form>
@@ -81,7 +85,7 @@ function Calculator({ workouts, allowSound }) {
           {mins}:{seconds < 10 && "0"}
           {seconds}
         </p>
-        <button onClick={() => {}}>+</button>
+        <button onClick={handleInc}>+</button>
       </section>
     </>
   );
