@@ -19,8 +19,11 @@ function Calculator({ workouts, allowSound }) {
 
   useEffect(() => {
     setDurationBreak((number * sets * speed) / 60 + (sets - 1) * durationBreak);
-  }, [number, sets, speed, durationBreak]);
+    playSound()
+  }, [number, sets, speed, durationBreak, playSound]);
 
+
+  
   function handleInc() {
     setDuration((duration) => Math.floor(duration + 1));
     playSound();
