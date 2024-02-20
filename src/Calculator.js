@@ -30,7 +30,7 @@ function Calculator({ workouts, allowSound }) {
     sound.play();
   }
   playSound()
-  }, [duration])
+  }, [allowSound, duration])
   
   return (
     <>
